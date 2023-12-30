@@ -2,18 +2,21 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const server = require('https').createServer(app);
-const io = require('socket.io')(server, { 
-  cors: { 
+const server = require('http').createServer(app);
+const io = require('socket.io')(server, {
+  cors: {
     origin: 'https://chat-application-ocy9.vercel.app',  // Update with your React app's domain
     methods: ["GET", "POST", "PUT"],
     credentials: true,
-  } 
+  }
 });
 const port = process.env.PORT;
 
+// Use cors middleware to handle CORS headers
+app.use(cors());
+
+// Your custom middleware to handle additional headers
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://chat-application-ocy9.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
