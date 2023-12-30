@@ -1,0 +1,143 @@
+::-webkit-scrollbar {
+  width: 12%; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the thumb */
+  border-radius: 6px; /* Set the border radius of the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the color of the track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change thumb color on hover */
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* Hide scrollbar buttons (if present) */
+}
+body {
+  overscroll-behavior-y: none;
+  background-image: url('https://w0.peakpx.com/wallpaper/635/342/HD-wallpaper-game-concepts-game-console-headphones-joystick-games-icon-color-art.jpg');
+  overflow: none;
+}
+.message-container{
+
+  height: 29rem;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  margin-top: 0.4rem;
+  
+}
+#upperDiv{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(155, 146, 230);
+    height: 2.5rem;
+}
+.left{
+
+  float: left;
+  clear: both;
+  min-width: 4rem;
+  max-width: 30rem;
+  margin: 7px;
+  padding:7px;
+  padding-bottom: 10px;
+  background-color: #888888;
+  border-radius: 18px;
+  
+}
+.center{
+  color:"black";
+  background-color: #888888;
+  min-width: 4rem;
+  max-width: 13rem;
+  border-radius:9px;
+  margin-top: 5px;
+  clear: both;
+}
+.right{
+  float:right;
+  clear:both;
+  min-width: 4rem;
+  max-width: 30rem;
+  margin: 7px;
+  padding:7px;
+  padding-bottom: 10px;
+  background-color: #738beb;
+  border-radius: 18px;
+}
+#form {
+  /* This bit sets up the horizontal layout */
+  max-height: 62px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 3%; */
+}
+
+input {
+
+  min-width: calc(30vh);
+  max-width: calc(40vh); 
+  margin-top: 0.5rem;
+}
+
+form:focus-within { 
+  outline: 1px solid blue 
+}
+
+#icon-trigger {
+
+  border:1px solid blue;
+  background:blue;
+  color:white;
+  display: flex;
+  
+}
+.rightSide{
+  width: 5px;
+  height: 50px;
+}
+#img{
+  width: 20px;
+  height: 20px;
+}
+.button{
+ 
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size:3rem;
+
+}
+#buttons-container{
+ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-left: 10px;
+  border-radius: 9px;
+}
+#buttons{
+  
+  /* max-width: 70%; */
+  background-color: #738beb;
+  padding: 0.5px;
+  border-radius: 9px;
+  
+}
+
