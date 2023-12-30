@@ -5,12 +5,12 @@ const app = express();
 const server = require('https').createServer(app);
 const io = require('socket.io')(server, { 
   cors: { 
-    origin: 'https://chat-application-ocy9.vercel.app',  // Update with your React app's domain
+    origin: 'https://chat-application-ocy9.vercel.app/,  // Update with your React app's domain
     methods: ["GET", "POST", "PUT"],
     credentials: true,
   } 
 });
-const port = process.env.PORT || 3001;
+const port = process.env.PORT;
 
 app.use(
   cors({
