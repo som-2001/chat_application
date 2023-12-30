@@ -8,7 +8,7 @@ const port = 3001;
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://chat-application-ocy9.vercel.app/"],
     methods: ["GET", "POST", "PUT"],
     credentials: true,
   })
