@@ -3,7 +3,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const server = require('http').createServer(app);
-const io = require('socket.io')(server, { cors: { origin: 'https://chat-application-ocy9.vercel.app' } });
+const io = require('socket.io')(server, { 
+  cors: { 
+    origin: 'https://chat-application-ocy9.vercel.app',  // Update with your React app's domain
+    methods: ["GET", "POST", "PUT"],
+    credentials: true,
+  } 
+});
 const port = process.env.PORT || 3001;
 
 app.use(
