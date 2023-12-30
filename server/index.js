@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, { cors: { origin: 'https://chat-application-ocy9.vercel.app' } });
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 app.use(
   cors({
