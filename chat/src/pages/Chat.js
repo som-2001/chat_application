@@ -9,7 +9,7 @@ import { SiAudioboom } from "react-icons/si";
 import { LiaFilePdfSolid } from "react-icons/lia";
 
 import { GiBreakingChain } from "react-icons/gi";
-const socket = io("https://chat-application-psi-one.vercel.app");
+const socket = io("*");
 
 export const Chat = () => {
   const [text, setText] = useState('');
