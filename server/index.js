@@ -84,7 +84,9 @@ io.on('connection', (socket) => {
           // console.log(data);
           socket.to(data.room_name).emit('screenShareFrame', data.imageData,data.audioStream);
         });  
-
+socket.on('connect_error', (error) => {
+  console.error('WebSocket connection error:', error);
+});
   socket.on('disconnect', () => {
     console.log(`User ${socket.id} disconnected`);
   
