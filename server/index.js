@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const server = require('http').createServer(app);
+const server = require('https').createServer(app);
 const io = require('socket.io')(server, { 
   cors: { 
     origin: 'https://chat-application-ocy9.vercel.app',  // Update with your React app's domain
